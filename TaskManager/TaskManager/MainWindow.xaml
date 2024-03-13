@@ -1,0 +1,52 @@
+﻿<Window x:Class="TaskManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="700">
+
+    <Grid>
+        <Grid Grid.Column="1" Background="#2d3250">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <TextBlock Margin="0,25,0,0" Text="Welcome back!" Foreground="White" FontSize="25" FontStretch="Condensed" FontFamily="Cascadia Mono SemiBold" />
+                <Label Foreground="White" Background="{x:Null}" Content="User name" Margin="0,25,0,0"/>
+                <TextBox Name="User" Background="#424769" Foreground="White"  Margin="0,0,0,0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="#FFFF8000" />
+                <Label Foreground="White" Background="{x:Null}" Content="Password" Margin="0,0,0,0"/>
+                <PasswordBox Name="PassBlock" Margin="0,0,0,0" Height="30" Foreground="White" Background="#424769" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="#FFFF8000"/>
+                <Button Click="Login_Clicked" Margin="0,5,0,-40" Content="Login" Height="25" Width="45" Background="#FFE67F16" Foreground="#2d3250" BorderBrush="{x:Null}" >
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="12"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <TextBlock Margin="0,45,0,0" Text="Dont have an account yet?" Foreground="White" FontStretch="ExtraCondensed" FontFamily="Cascadia Mono SemiBold" FontSize="13"/>
+                <Button Click="Button_Click" Margin="0,5,0,0" Background="#FFE67F16" Foreground="#2d3250" Height="20" Width="60" Content="Sing Up">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+        
+        <Image Grid.Column="0" Source="/Images/wallpaper.jpg" Stretch="Fill"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>
